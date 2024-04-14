@@ -1,0 +1,33 @@
+server:
+ port: 8083
+spring:
+ application:
+  name: employee-service
+ datasource:
+  url: jdbc:mysql://${MYSQL_HOST:localhost}:3306/employeedb
+  username: 
+  password:
+  driver-class-name: com.mysql.jdbc.Driver
+ jpa:
+   hibernate:
+    ddl-auto:  update 
+    
+eureka:
+ client:
+  service-Url:
+   defaultZone: http://localhost:8082/eureka
+  register-with-eureka: true
+  fetch-registry: true
+management:
+ endpoints:
+  web:
+   base-path: /*
+ endpoint:
+    env:
+      enabled: true
+        
+   
+  
+      
+
+ 
